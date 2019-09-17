@@ -3,7 +3,7 @@
 import javax.swing.*;
 public class DebugEleven4
 {
-   static DebugBoat[] boatArray = new DebugBoat[5];
+   static DebugBoat[] boatArray = new DebugBoat[3];
    public static void main(String[] args) 
    {
       buildArray();
@@ -16,13 +16,13 @@ public class DebugEleven4
      for(int x = 0; x < boatArray.length; ++x)
      {
         boatType = getBoat();
-        if(boatType =='r')
- 	     boatArray[x] = DebugRowboat();
+        if(boatType == 'r')
+           boatArray[x] = new DebugRowboat();
         else
-          boatArray[x] = DebugOceanLiner();
+           boatArray[x] = new DebugOceanLiner();
      }
    }
-   public static void getBoat()
+   public static char getBoat()
    {
       String boatType;
       boatType = JOptionPane.showInputDialog(null, 
@@ -33,6 +33,6 @@ public class DebugEleven4
    {
       for(int x = 0; x < boatArray.length; --x)
       JOptionPane.showMessageDialog(null, "Boat #" + (x  + 1) +
-         boatArray[x].toString);
+         boatArray[x].toString());
    }
 }
