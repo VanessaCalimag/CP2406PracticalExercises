@@ -12,7 +12,7 @@ public class DebugFifteen1 extends JFrame implements ActionListener
    JButton button5 = new JButton("Black");
 
    JPanel panel1 = new JPanel(new FlowLayout());
-   JPanel panel2 = new JPanel();
+   JPanel panel2 = new JPanel(new FlowLayout());
 
    public DebugFifteen1()
    {
@@ -21,11 +21,10 @@ public class DebugFifteen1 extends JFrame implements ActionListener
       add(panel1);
       add(panel2);
       panel1.add(button1);
-      panel1.add(button1);
-      panel1.add(button1);
-      panel1.add(button1);
-      panel1.add(button1);
-
+      panel1.add(button2);
+      panel1.add(button3);
+      panel1.add(button4);
+      panel1.add(button5);
 
       button1.addActionListener();
       button2.addActionListener();
@@ -36,8 +35,7 @@ public class DebugFifteen1 extends JFrame implements ActionListener
       setVisible(true);
    }
    @Override
-   public void actionPerformed(ActionEvent e)
-   {
+   public void actionPerformed(ActionEvent e) {
       Object source = e.getSource();
       if(source == button1)
          panel2.setBackground(Color.RED);
@@ -48,8 +46,9 @@ public class DebugFifteen1 extends JFrame implements ActionListener
       else if(source  == button4)         
          panel2.setBackground(Color.YELLOW);
       else 
-         panel2.setBackground(Color.YELLOW);
+         panel2.setBackground(Color.BLACK);
    }
+
    public static void main(String[] args)
    {
       DebugFifteen1 frame = new DebugFifteen1();
