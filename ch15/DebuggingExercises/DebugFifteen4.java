@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-public class DebugFifteen4 extends JFrame
+public class DebugFifteen4 extends JFrame implements ActionListener
 {
    JMenuBar mainBar = new JMenuBar();
    JMenu menu1 = new JMenu("File");
